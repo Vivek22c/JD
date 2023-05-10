@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('SCM - Checkout'){
+			steps{
+				git url: 'https://github.com/Vivek22c/JD'
+			
+			}
+		}
         stage ('Build Servlet Project') {
             steps {
                 /*For windows machine */
